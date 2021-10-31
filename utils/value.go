@@ -3,7 +3,7 @@ package utils
 import (
 	"bytes"
 	"encoding/binary"
-	"gofly/logs"
+	"github.com/fly-way/gofly/logs"
 	"math"
 	"strconv"
 	"strings"

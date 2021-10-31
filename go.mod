@@ -1,4 +1,4 @@
-module gofly
+module github.com/fly-way/gofly
 
 go 1.16
 

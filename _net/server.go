@@ -1,7 +1,7 @@
 package _net
 
 import (
-	"gofly/logs"
+	"github.com/fly-way/gofly/logs"
 	"net/http"
 	"os"
 	"os/signal"

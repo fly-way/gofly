@@ -5,8 +5,8 @@ import (
 	"encoding/binary"
 	"errors"
 	"github.com/gorilla/websocket"
-	"gofly/logs"
-	"gofly/utils/encrypt"
+	"github.com/fly-way/gofly/logs"
+	"github.com/fly-way/gofly/utils/encrypt"
 	"net"
 	"sync"
 )

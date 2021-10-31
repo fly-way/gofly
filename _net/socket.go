@@ -4,7 +4,7 @@ import (
 	"encoding/binary"
 	"fmt"
 	"github.com/gorilla/websocket"
-	"gofly/logs"
+	"github.com/fly-way/gofly/logs"
 	"net"
 	"net/http"
 	"strconv"

@@ -4,7 +4,7 @@ import (
 	"fmt"
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/jmoiron/sqlx"
-	"gofly/logs"
+	"github.com/fly-way/gofly/logs"
 )
 
 const (
