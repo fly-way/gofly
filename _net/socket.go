@@ -3,8 +3,8 @@ package _net
 import (
 	"encoding/binary"
 	"fmt"
-	"github.com/gorilla/websocket"
 	"github.com/fly-way/gofly/logs"
+	"github.com/gorilla/websocket"
 	"net"
 	"net/http"
 	"strconv"

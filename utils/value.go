@@ -91,7 +91,7 @@ func SetEndian(n bool) {
 }
 
 // interface 转 []byte
-func ToByte(n interface{}) []byte {
+func ToBytes(n interface{}) []byte {
 	switch n := n.(type) {
 	case string:
 		return []byte(n)

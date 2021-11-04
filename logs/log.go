@@ -1,7 +1,6 @@
 package logs
 
 import (
-	"fmt"
 	"io"
 	"os"
 	"runtime"
@@ -85,8 +84,6 @@ func (l *logger) output(s string) error {
 	}
 	_, err := l.out.Write(l.buf)
 
-	// TODO 临时输出
-	fmt.Print(string(l.buf))
 	return err
 }
 

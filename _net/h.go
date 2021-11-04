@@ -73,11 +73,6 @@ type ISocket interface {
 }
 
 type IRpc interface {
-	// 注册节点标识
-	// id 节点id typ 节点类型
-	// 用于区分rpc集群中各个节点
-	RegNode(id int, typ string)
-
 	// 注册接口
 	// 可注册多个接口
 	RegRcv(rcv interface{})
@@ -86,10 +81,15 @@ type IRpc interface {
 	// 未注册时表示允许所有连接
 	// 注册后只允许ips集合里的ip进行rpc连接
 	// 重复调用会覆盖之前注册的ips
-	RegAllowIps(ips map[string]bool)
+	RegAllowIps(ip ...string)
 
 	// 开启端口监听, host ip地址, port 端口
-	Listen(host string, port int)
+	// 先完成注册后, 再开启监听, 若先监听, 再注册, 会导致两者之间的监听对象状态异常
+	// done 可作为完成信号, 配合 CloseDone 能更好的管理服务器状态
+	Listen(host string, port int, done *chan bool)
+
+	// 关闭 done, 一般在rpc集群准备就绪后调用, 唤醒 <-done 阻塞
+	CloseDone()
 }
 
 type IConn interface {
