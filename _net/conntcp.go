@@ -114,6 +114,7 @@ func (_this *connTcp) reader() {
 		msg, err := _this.unPack(_this.headPool)
 		if err != nil {
 			logs.Error("unpack err:", err)
+			return
 		}
 
 		var data []byte
